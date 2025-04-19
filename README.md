@@ -44,6 +44,9 @@ Mainly we just convert one matrix to other using **Kernel** matrix. This picture
 
 ![image](readme_img/dilation.gif)
 
+## MNIST convolution example
+
+![image](readme_img/example.png)
 
 ## Fast algorithms
 
