@@ -50,39 +50,28 @@ Mainly we just convert one matrix to other using **Kernel** matrix. This picture
 ### FIR filter
 
 Multiplications required
-$$
+$
 \mu(F(m, r)) = m + r - 1
-$$
+$
 
-$$
-F(2, 3) =
-\begin{bmatrix}
+$F(2, 3) = \begin{bmatrix}
 d0 & d1 & d2 \\
 d1 & d2 & d2
-\end{bmatrix}
-
-\begin{bmatrix}
+\end{bmatrix}$ $\begin{bmatrix}
 g0 \\
 g1 \\
 g2 \\
-\end{bmatrix}
-
-=
-
-\begin{bmatrix}
+\end{bmatrix}$=$\begin{bmatrix}
 m1+m2+m3 \\
 m2 -m3 - m4
-\end{bmatrix}
-$$
+\end{bmatrix}$
 
 where
 
-$$
-m1 = (d0-d2)g0 \ \ \ m2 = (d1+d2)\frac{g0+g1+g2}{2}
-\\
+$m1 = (d0-d2)g0 \ \ \ m2 = (d1+d2)\frac{g0+g1+g2}{2}$
 
-m4 = (d1-d3)g2 \ \ \ m3 = (d2-d1) \frac{g0-g1+g2}{2}
-$$
+
+$m4 = (d1-d3)g2 \ \ \ m3 = (d2-d1) \frac{g0-g1+g2}{2}$
 
 ## Winograd algorithm
 We move the input mat to other space, where we can replace convolution to Hadamard product (element by element composition)
